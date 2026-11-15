@@ -111,7 +111,7 @@ def test_dry_run_mode_prints_word_and_skips_notify(tmp_path, capsys):
 
 # 5. Xác nhận tệp vocab/tu_vung.txt sẵn có chứa tối thiểu 70 mục hợp lệ khi nạp
 def test_existing_tu_vung_contains_at_least_70_valid_entries():
-    real_file = Path("vocab/tu_vung.txt")
+    real_file = _ROOT / "vocab" / "tu_vung.txt"
     assert real_file.exists(), "vocab/tu_vung.txt does not exist"
 
     words = vocab.load(real_file)
