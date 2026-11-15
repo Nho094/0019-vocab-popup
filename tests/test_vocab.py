@@ -119,3 +119,20 @@ def test_cycle_empty():
     gen = vocab.cycle([])
     items = list(item for item in (next(gen, None) for _ in range(3)) if item is not None)
     assert items == []
+
+
+def test_load_leading_blank_lines(tmp_path):
+    content = "\n\nHeader\tHeader\tHeader\napple\ttáo\t/ˈæp.əl/\n"
+    p = _write_tsv(tmp_path, content)
+    words = vocab.load(p)
+    assert len(words) == 1
+    assert words[0]["english"] == "apple"
+
+
+def test_cycle_generator():
+    words = ({"english": str(i), "vietnamese": "", "ipa": ""} for i in range(3))
+    gen = vocab.cycle(words)
+    items = [next(gen)["english"] for _ in range(9)]
+    assert len(items) == 9
+    for a, b in zip(items, items[1:]):
+        assert a != b

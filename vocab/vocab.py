@@ -19,10 +19,14 @@ def load(path):
     """Read a tab-separated vocabulary file; return a list of word dicts."""
     words = []
     p = Path(path)
+    header_skipped = False
     with p.open(encoding="utf-8") as fh:
         for lineno, raw in enumerate(fh, 1):
             line = raw.rstrip("\n\r")
-            if lineno == 1 or not line.strip():   # skip header and blank lines
+            if not line.strip():  # skip blank lines
+                continue
+            if not header_skipped:  # skip header row
+                header_skipped = True
                 continue
             cols = line.split("\t")
             if len(cols) < 3:
@@ -43,22 +47,24 @@ def cycle(words):
     """Yield from words in a shuffled loop, never repeating last word across rounds.
 
     Algorithm: shuffle each round; if the new round's first word equals the
-    previous round's last word, swap the first with a random other position.
+    previous round's last word, swap the first with another position.
     """
-    if not words:
-        return
-    if len(words) == 1:
-        while True:
-            yield words[0]
-        return  # unreachable, satisfies linters
-
     pool = list(words)
+    if not pool:
+        return
+    if len(pool) == 1:
+        while True:
+            yield pool[0]
+
     last = None
     while True:
         random.shuffle(pool)
         # Avoid back-to-back duplicate across rounds
-        if pool[0] is last and len(pool) > 1:
-            swap = random.randrange(1, len(pool))
+        if (pool[0] is last or pool[0] == last) and len(pool) > 1:
+            diff_indices = [
+                i for i in range(1, len(pool)) if pool[i] != last and pool[i] is not last
+            ]
+            swap = random.choice(diff_indices) if diff_indices else random.randrange(1, len(pool))
             pool[0], pool[swap] = pool[swap], pool[0]
         for word in pool:
             last = word
