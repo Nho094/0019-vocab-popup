@@ -1,99 +1,100 @@
-あ a 
-い i stomach
-う ɯ 
-え e 
-お o 
-あい ai love
-うえ ɯe up, above
-いいえ iːe no
-あおい aoi blue
-か ka mosquito
-が ɡa 
-き ki 
-ぎ ɡi 
-く kɯ 
-ぐ ɡɯ 
-け ke 
-げ ɡe 
-こ ko 
-ご ɡo 
-かく kakɯ to write
-かげ kaɡe shadow
-きく kikɯ to listen
-こえ koe voice
-かぎ kaɡi key
-きおく kiokɯ memory
-えいが eːɡa movie
-おおきい oːkiː big
-さ sa 
-ざ za 
-し ɕi 
-じ dʑi letter
-す sɯ 
-ず zɯ diagram
-せ se 
-ぜ ze 
-そ so 
-ぞ zo 
-すし sɯɕi sushi
-じこ dʑiko accident
-すき sɯ̥ki like
-さく sakɯ to bloom: nở hoa
-ぞう zoː elephant
-おかし okaɕi sweet
-おさけ osake alcohol
-さいご saiɡo last
-そうぞう soːzoː imagination
-こうこうせい koːkoːseː high school student
-かさ kasa umbrella
-けす kesɯ to erase
-さそう sasoː to invite
-かえす kaesɯ to return
-おす osɯ to push
-くじ kɯdʑi lottery: xổ số
-おこす okosɯ to wake someone up
-うさぎ ɯsaɡi rabbit
-きし kiɕi knight
-しお ɕio salt: muối
-すこし sɯkoɕi a little
-さいせい saiseː playback
-すぐ sɯɡɯ immediately
-いしき iɕiki consciousness: ý thức
-さがす saɡasɯ search
-おかしい okaɕiː strange
-しぐさ ɕiɡɯsa gesture mannerism
-しかく ɕikakɯ square
-がくせい ɡakɯseː student
-た ta 
-だ da 
-ち tɕi 
-ぢ dʑi 
-つ tsɯ 
-づ dzɯ 
-て te hand
-で de 
-と to 
-ど do 
-くつ kɯtsɯ shoes
-ちず tɕizɯ map
-でし deɕi apprentice: người học việc
-たつ tatsɯ to stand
-とおい toːi far
-つづく tsɯdzɯkɯ continue
-どつち dotːɕi 
-だいがく daiɡakɯ university
-あさつて asatːe day after tomorrow
-あちつく otɕitsɯkɯ to calm down
-な na 
-に ɲi 
-ぬ nɯ 
-ね ne 
-の no 
-なに naɲi what
-いぬ inɯ dog
-ねこ neko cat
-にじ ɲidʑi rainbow
-おかね okane money
-せなか senaka upper back
-なつとう natsɯtoː fermented soybeans
-おねがい oneɡai please, request
+word	meaning	ipa
+あ		a
+い	stomach	i
+う		ɯ
+え		e
+お		o
+あい	love	ai
+うえ	up, above	ɯe
+いいえ	no	iːe
+あおい	blue	aoi
+か	mosquito	ka
+が		ɡa
+き		ki
+ぎ		ɡi
+く		kɯ
+ぐ		ɡɯ
+け		ke
+げ		ɡe
+こ		ko
+ご		ɡo
+かく	to write	kakɯ
+かげ	shadow	kaɡe
+きく	to listen	kikɯ
+こえ	voice	koe
+かぎ	key	kaɡi
+きおく	memory	kiokɯ
+えいが	movie	eːɡa
+おおきい	big	oːkiː
+さ		sa
+ざ		za
+し		ɕi
+じ	letter	dʑi
+す		sɯ
+ず	diagram	zɯ
+せ		se
+ぜ		ze
+そ		so
+ぞ		zo
+すし	sushi	sɯɕi
+じこ	accident	dʑiko
+すき	like	sɯ̥ki
+さく	to bloom: nở hoa	sakɯ
+ぞう	elephant	zoː
+おかし	sweet	okaɕi
+おさけ	alcohol	osake
+さいご	last	saiɡo
+そうぞう	imagination	soːzoː
+こうこうせい	high school student	koːkoːseː
+かさ	umbrella	kasa
+けす	to erase	kesɯ
+さそう	to invite	sasoː
+かえす	to return	kaesɯ
+おす	to push	osɯ
+くじ	lottery: xổ số	kɯdʑi
+おこす	to wake someone up	okosɯ
+うさぎ	rabbit	ɯsaɡi
+きし	knight	kiɕi
+しお	salt: muối	ɕio
+すこし	a little	sɯkoɕi
+さいせい	playback	saiseː
+すぐ	immediately	sɯɡɯ
+いしき	consciousness: ý thức	iɕiki
+さがす	search	saɡasɯ
+おかしい	strange	okaɕiː
+しぐさ	gesture mannerism	ɕiɡɯsa
+しかく	square	ɕikakɯ
+がくせい	student	ɡakɯseː
+た		ta
+だ		da
+ち		tɕi
+ぢ		dʑi
+つ		tsɯ
+づ		dzɯ
+て	hand	te
+で		de
+と		to
+ど		do
+くつ	shoes	kɯtsɯ
+ちず	map	tɕizɯ
+でし	apprentice: người học việc	deɕi
+たつ	to stand	tatsɯ
+とおい	far	toːi
+つづく	continue	tsɯdzɯkɯ
+どつち		dotːɕi
+だいがく	university	daiɡakɯ
+あさつて	day after tomorrow	asatːe
+あちつく	to calm down	otɕitsɯkɯ
+な		na
+に		ɲi
+ぬ		nɯ
+ね		ne
+の		no
+なに	what	naɲi
+いぬ	dog	inɯ
+ねこ	cat	neko
+にじ	rainbow	ɲidʑi
+おかね	money	okane
+せなか	upper back	senaka
+なつとう	fermented soybeans	natsɯtoː
+おねがい	please, request	oneɡai
