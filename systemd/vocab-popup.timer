@@ -1,9 +1,10 @@
 [Unit]
-Description=Lặp lại thông báo từ vựng mỗi 5 phút
+Description=Hiển thị từ vựng mỗi 60 giây
 
 [Timer]
 OnBootSec=1min
-OnUnitActiveSec=5min
+OnUnitActiveSec=60s
+AccuracySec=1s
 Unit=vocab-popup.service
 
 [Install]

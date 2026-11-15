@@ -97,10 +97,20 @@
         "Tiêu chí manual không được tính là kiểm chứng xác định L3"
       ],
       "evidence": ""
+    },
+    {
+      "id": "L4-REVIEW",
+      "name": "Review độc lập",
+      "level": 4,
+      "status": "unverified",
+      "issues": [
+        "Chưa vượt qua các mức L0-L3 nên chưa thể xác nhận L4"
+      ]
     }
   ],
   "missing": [
-    "Tiêu chí manual không được tính là kiểm chứng xác định L3"
+    "Tiêu chí manual không được tính là kiểm chứng xác định L3",
+    "Chưa vượt qua các mức L0-L3 nên chưa thể xác nhận L4"
   ],
   "acceptance": {
     "criteria": [

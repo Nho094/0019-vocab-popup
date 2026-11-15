@@ -1,8 +1,11 @@
 [Unit]
-Description=Hiển thị một từ vựng tiếng Anh
+Description=Hiển thị từ vựng tiếng Anh (2 từ mỗi lượt)
 After=graphical-session.target
 
 [Service]
-Type=oneshot
+Type=simple
 WorkingDirectory=%h/.local/share/vocab-popup
-ExecStart=/usr/bin/python3 %h/.local/share/vocab-popup/app.py --file %h/.local/share/vocab-popup/vocab/tu_vung.txt --once
+ExecStart=/usr/bin/python3 %h/.local/share/vocab-popup/app.py --file %h/.local/share/vocab-popup/vocab/tu_vung.txt --burst 2 --burst-gap 10 --interval 50
+
+[Install]
+WantedBy=default.target

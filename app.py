@@ -18,6 +18,35 @@ except (ImportError, AttributeError):
 from notifier import notify
 
 
+def positive_seconds(value):
+    """argparse type that rejects intervals which would spin the loop."""
+    try:
+        seconds = int(value)
+    except ValueError as exc:
+        raise argparse.ArgumentTypeError("must be an integer number of seconds") from exc
+    if seconds <= 0:
+        raise argparse.ArgumentTypeError("must be greater than zero")
+    return seconds
+
+
+def non_negative_seconds(value):
+    try:
+        seconds = int(value)
+    except ValueError as exc:
+        raise argparse.ArgumentTypeError("must be an integer number of seconds") from exc
+    if seconds < 0:
+        raise argparse.ArgumentTypeError("must not be negative")
+    return seconds
+
+
+def show_round(gen, burst, gap):
+    """Show `burst` words, `gap` seconds apart."""
+    for index in range(burst):
+        if index:
+            time.sleep(gap)
+        notify(next(gen))
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Show vocabulary pop-up notifications from a TSV file."
@@ -31,10 +60,24 @@ def main():
     )
     parser.add_argument(
         "--interval",
-        type=int,
-        default=300,
+        type=positive_seconds,
+        default=60,
         metavar="SECONDS",
         help="Seconds between notifications (default: 300)",
+    )
+    parser.add_argument(
+        "--burst",
+        type=positive_seconds,
+        default=2,
+        metavar="N",
+        help="Words shown per round (default: 1)",
+    )
+    parser.add_argument(
+        "--burst-gap",
+        type=non_negative_seconds,
+        default=15,
+        metavar="SECONDS",
+        help="Seconds between words inside a round (default: 15)",
     )
     args = parser.parse_args()
 
@@ -44,19 +87,19 @@ def main():
         sys.exit(1)
 
     gen = cycle(words)
-    word = next(gen)
 
     if args.dry_run:
+        word = next(gen)
         print(f"{word['english']} {word['ipa']} — {word['vietnamese']}")
         return
 
-    notify(word)
+    show_round(gen, args.burst, args.burst_gap)
     if args.once:
         return
 
     while True:
         time.sleep(args.interval)
-        notify(next(gen))
+        show_round(gen, args.burst, args.burst_gap)
 
 
 if __name__ == "__main__":
