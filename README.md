@@ -58,6 +58,14 @@ Thư mục `systemd/` cung cấp sẵn các file cấu hình unit để định 
 
    # Kích hoạt và bật timer chạy ngay
    systemctl --user enable --now vocab-popup.timer
+   
+   #Thay đổi và khôi phục cấu trúc
+   cp systemd/vocab-popup.service systemd/vocab-popup.timer                           ~/.config/systemd/user/
+   rm -rf ~/.local/share/vocab-popup/*
+   mkdir -p ~/.local/share/vocab-popup/vocab
+   cp app.py notifier.py vocab.py ~/.local/share/vocab-popup/
+   mkdir -p ~/.local/share/vocab-popup/vocab
+   cp vocab/tu_vung.txt vocab/vocab.py ~/.local/share/vocab-popup/vocab/
    ```
 
 ### Quản lý và theo dõi bằng systemctl

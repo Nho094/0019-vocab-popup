@@ -75,7 +75,7 @@ def main():
     parser.add_argument(
         "--burst-gap",
         type=non_negative_seconds,
-        default=15,
+        default=5,
         metavar="SECONDS",
         help="Seconds between words inside a round (default: 15)",
     )
