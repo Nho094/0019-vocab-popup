@@ -1,0 +1,14 @@
+{
+  "criteria": [
+    {
+      "id": "AC-1",
+      "status": "unverified",
+      "evidence": "",
+      "issues": [
+        "Tiêu chí manual không được tính là kiểm chứng xác định L3"
+      ]
+    }
+  ],
+  "passed": false,
+  "command_results": {}
+}

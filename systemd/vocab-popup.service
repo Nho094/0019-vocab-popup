@@ -1,0 +1,8 @@
+[Unit]
+Description=Hiển thị một từ vựng tiếng Anh
+After=graphical-session.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/.local/share/vocab-popup
+ExecStart=/usr/bin/python3 %h/.local/share/vocab-popup/app.py --file %h/.local/share/vocab-popup/vocab/tu_vung.txt --once

@@ -1,0 +1,4 @@
+# Hợp đồng project
+- generic: {"files": ["app.py", "notifier.py", "skills-lock.json", "tests/test_app.py", "tests/test_vocab.py", "vocab/tu_vung.txt", "vocab/vocab.py"]}
+- python: {"modules": {"notifier.py": [{"name": "notify", "line": 6, "signature": "word"}], "app.py": [{"name": "main", "line": 18, "signature": ""}], "tests/test_vocab.py": [{"name": "test_load_normal", "line": 42, "signature": "tmp_path"}, {"name": "test_load_preserves_special_chars", "line": 53, "signature": "tmp_path"}, {"name": "test_load_skips_blank_lines", "line": 62, "signature": "tmp_path"}, {"name
+- data: {"skills-lock.json": {"keys": ["skills", "version"]}}
