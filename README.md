@@ -1,39 +1,84 @@
 # Vocab Popup
 
-Ứng dụng Python thuần hiển thị một từ tiếng Anh, phiên âm IPA và nghĩa tiếng Việt từ `vocab/tu_vung.txt`.
-Không cần cài package Python. File từ vựng là TSV ba cột; dòng tiêu đề và dòng trống được bỏ qua, dòng thiếu cột
-được cảnh báo ra stderr.
+Vocab Popup là một linux app (ứng dụng Python thuần) hiển thị popup thông báo từ vựng tiếng Anh kèm phiên âm IPA và nghĩa tiếng Việt từ file `vocab/tu_vung.txt`. Ứng dụng không yêu cầu cài đặt thêm thư viện ngoài, gửi thông báo qua `notify-send` trên desktop session. File từ vựng sử dụng định dạng TSV ba cột (`english`, `ipa`, `vietnamese`); dòng tiêu đề và dòng trống được bỏ qua, dòng thiếu cột sẽ được cảnh báo ra stderr.
 
-## Chạy thử
+## Sử dụng dòng lệnh trực tiếp
+
+Bạn có thể chạy trực tiếp ứng dụng từ dòng lệnh terminal:
 
 ```sh
+# Xem hướng dẫn trợ giúp
 python3 app.py --help
+
+# Chạy thử một từ ra stdout (không gửi thông báo)
 python3 app.py --file vocab/tu_vung.txt --dry-run
+
+# Gửi một thông báo từ vựng rồi thoát ngay lập tức
+python3 app.py --file vocab/tu_vung.txt --once
+
+# Chạy lặp lại mặc định mỗi 5 phút (300 giây)
+python3 app.py --file vocab/tu_vung.txt
+
+# Chạy lặp lại với khoảng thời gian tùy chỉnh (ví dụ: mỗi 60 giây)
+python3 app.py --file vocab/tu_vung.txt --interval 60
+
+# Chạy kiểm thử tự động
 python3 -m pytest -q
 ```
 
-`--dry-run` chỉ in một dòng, không gọi `notify-send`. `--once` gửi một thông báo rồi thoát. Mặc định ứng dụng
-chạy liên tục, chờ 300 giây giữa các từ. `notify-send` cần có trong PATH và desktop session cần cung cấp D-Bus
-notifications; lỗi gửi được in ra stderr.
+Yêu cầu môi trường: `notify-send` (thuộc gói `libnotify`) có trong `PATH` và desktop session hỗ trợ D-Bus notification service.
 
-## Chạy định kỳ bằng systemd user timer
+## Cấu hình chạy định kỳ bằng systemd timer
 
-Các unit mẫu nằm trong `systemd/`. Chúng chạy ứng dụng một lần mỗi lượt timer, không chạy daemon lặp song song.
-Đặt bản ứng dụng và file từ vựng tại `~/.local/share/vocab-popup/` (giữ nguyên thư mục `vocab/` cùng
-`tu_vung.txt`), sau đó cài unit vào tài khoản hiện tại:
+Thư mục `systemd/` cung cấp sẵn các file cấu hình unit để định lịch thông báo định kỳ mỗi 5 phút mà không cần tiến trình nền chạy vòng lặp vô tận:
+- `systemd/vocab-popup.service`: service kiểu `Type=oneshot` thực thi `app.py --file ... --once`.
+- `systemd/vocab-popup.timer`: systemd timer kích hoạt dịch vụ với `OnUnitActiveSec=5min` (mỗi 5 phút).
 
-```sh
-mkdir -p ~/.local/share/vocab-popup ~/.config/systemd/user
-# Sao chép app.py, notifier.py và thư mục vocab/ từ thư mục dự án vào ~/.local/share/vocab-popup/.
-cp systemd/vocab-popup.service systemd/vocab-popup.timer ~/.config/systemd/user/
-systemd-analyze --user verify ~/.config/systemd/user/vocab-popup.service ~/.config/systemd/user/vocab-popup.timer
-systemctl --user daemon-reload
-systemctl --user enable --now vocab-popup.timer
-```
+### Kích hoạt dịch vụ qua systemctl --user
 
-Timer gửi từ đầu tiên khoảng một phút sau khi user manager khởi động; các lần sau cách nhau năm phút. Các lệnh
-trên chỉ thao tác unit cấp user. Để kiểm tra, dùng `systemctl --user status vocab-popup.timer` và
-`journalctl --user -u vocab-popup.service`; tắt lịch bằng `systemctl --user disable --now vocab-popup.timer`.
+1. Chuẩn bị thư mục ứng dụng và thư mục cấu hình user systemd:
+   ```sh
+   mkdir -p ~/.local/share/vocab-popup ~/.config/systemd/user
+   ```
 
-Nếu `notify-send` chạy được trong terminal nhưng không hiện thông báo từ timer, kiểm tra môi trường desktop/D-Bus
-của user manager và log service. Không cần chạy service bằng root.
+2. Sao chép mã nguồn (`app.py`, `notifier.py` và thư mục `vocab/`) vào `~/.local/share/vocab-popup/`.
+
+3. Sao chép các unit file vào thư mục cấu hình systemd user:
+   ```sh
+   cp systemd/vocab-popup.service systemd/vocab-popup.timer ~/.config/systemd/user/
+   ```
+
+4. Nạp lại cấu hình và kích hoạt timer bằng lệnh `systemctl`:
+   ```sh
+   # Kiểm tra tính hợp lệ của unit file
+   systemd-analyze --user verify ~/.config/systemd/user/vocab-popup.service ~/.config/systemd/user/vocab-popup.timer
+
+   # Nạp lại daemon cấu hình systemd của user
+   systemctl --user daemon-reload
+
+   # Kích hoạt và bật timer chạy ngay
+   systemctl --user enable --now vocab-popup.timer
+   ```
+
+### Quản lý và theo dõi bằng systemctl
+
+- Xem trạng thái của systemd timer:
+  ```sh
+  systemctl --user status vocab-popup.timer
+  ```
+
+- Xem danh sách các timer và thời điểm kích hoạt tiếp theo:
+  ```sh
+  systemctl --user list-timers --all
+  ```
+
+- Theo dõi nhật ký log thực thi của service:
+  ```sh
+  journalctl --user -u vocab-popup.service -f
+  ```
+
+- Dừng và vô hiệu hóa timer:
+  ```sh
+  systemctl --user disable --now vocab-popup.timer
+  ```
+

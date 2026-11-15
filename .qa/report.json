@@ -1,6 +1,6 @@
 {
-  "status": "failed",
-  "level_reached": 0,
+  "status": "unverified",
+  "level_reached": 2,
   "required_level": 3,
   "plugins": [
     "generic",
@@ -12,14 +12,8 @@
       "id": "GEN-OUTPUT",
       "name": "File đầu ra",
       "level": 0,
-      "status": "fail",
-      "issues": [
-        "README.md: file đầu ra thiếu hoặc rỗng",
-        "systemd/vocab-popup.service: file đầu ra thiếu hoặc rỗng",
-        "systemd/vocab-popup.timer: file đầu ra thiếu hoặc rỗng",
-        "test_vocab.py: file đầu ra thiếu hoặc rỗng",
-        "vocab.py: file đầu ra thiếu hoặc rỗng"
-      ],
+      "status": "pass",
+      "issues": [],
       "evidence": null
     },
     {
@@ -123,116 +117,8 @@
     "command_results": {}
   },
   "contracts": {
-    "generic": {
-      "files": [
-        "app.py",
-        "notifier.py",
-        "skills-lock.json",
-        "tests/test_app.py",
-        "tests/test_vocab.py",
-        "vocab/tu_vung.txt",
-        "vocab/vocab.py"
-      ]
-    },
-    "python": {
-      "modules": {
-        "notifier.py": [
-          {
-            "name": "notify",
-            "line": 6,
-            "signature": "word"
-          }
-        ],
-        "app.py": [
-          {
-            "name": "main",
-            "line": 18,
-            "signature": ""
-          }
-        ],
-        "tests/test_vocab.py": [
-          {
-            "name": "test_load_normal",
-            "line": 42,
-            "signature": "tmp_path"
-          },
-          {
-            "name": "test_load_preserves_special_chars",
-            "line": 53,
-            "signature": "tmp_path"
-          },
-          {
-            "name": "test_load_skips_blank_lines",
-            "line": 62,
-            "signature": "tmp_path"
-          },
-          {
-            "name": "test_load_warns_missing_columns",
-            "line": 69,
-            "signature": "tmp_path, capsys"
-          },
-          {
-            "name": "test_load_real_file",
-            "line": 78,
-            "signature": ""
-          },
-          {
-            "name": "test_cycle_covers_all_words",
-            "line": 92,
-            "signature": ""
-          },
-          {
-            "name": "test_cycle_no_back_to_back_across_rounds",
-            "line": 102,
-            "signature": ""
-          },
-          {
-            "name": "test_cycle_single_word",
-            "line": 111,
-            "signature": ""
-          },
-          {
-            "name": "test_cycle_empty",
-            "line": 118,
-            "signature": ""
-          }
-        ],
-        "tests/test_app.py": [
-          {
-            "name": "test_notify_calls_notify_send",
-            "line": 28,
-            "signature": ""
-          },
-          {
-            "name": "test_dry_run_prints_one_line",
-            "line": 52,
-            "signature": "tmp_path, capsys"
-          },
-          {
-            "name": "test_once_calls_notify_once",
-            "line": 60,
-            "signature": "tmp_path"
-          },
-          {
-            "name": "test_empty_file_exits_nonzero",
-            "line": 68,
-            "signature": "tmp_path"
-          }
-        ],
-        "vocab/vocab.py": [
-          {
-            "name": "load",
-            "line": 18,
-            "signature": "path"
-          },
-          {
-            "name": "cycle",
-            "line": 42,
-            "signature": "words"
-          }
-        ]
-      }
-    },
+    "generic": "[đã rút gọn; xem contract plugin để trích lại]",
+    "python": "[đã rút gọn; xem contract plugin để trích lại]",
     "data": {
       "skills-lock.json": {
         "keys": [
