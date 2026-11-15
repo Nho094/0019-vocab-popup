@@ -81,4 +81,8 @@ Thư mục `systemd/` cung cấp sẵn các file cấu hình unit để định 
   ```sh
   systemctl --user disable --now vocab-popup.timer
   ```
-
+# Gentoo
+## Cài hiển thị thông báo 
+sudo emerge -avg mako
+# Arch
+yay -S mako
