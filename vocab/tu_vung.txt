@@ -1,77 +1,99 @@
-Tiếng Anh	Tiếng Việt	Phiên âm IPA
-refrigerator (fridge)	tủ lạnh	/rɪˈfrɪdʒəreɪtər/ ( /frɪdʒ/ )
-store	cửa hàng	/stɔːr/
-apartment	căn hộ	/əˈpɑːrtmənt/
-employee	nhân viên	/ɪmˈplɔɪiː/
-in stock	còn hàng	/ɪn stɑːk/
-extra-large	cỡ cực lớn	/ˌekstrə ˈlɑːrdʒ/
-stainless-steel finish	bề mặt hoàn thiện bằng thép không gỉ	/ˌsteɪnləs ˈstiːl ˈfɪnɪʃ/
-match	phù hợp, đồng bộ với	/mætʃ/
-appliance	thiết bị gia dụng	/əˈplaɪəns/
-additional charge	phụ phí	/əˈdɪʃənəl tʃɑːrdʒ/
-delivery	việc giao hàng	/dɪˈlɪvəri/
-downtown area	khu vực trung tâm thành phố	/ˈdaʊntaʊn ˈeriə/
-finalize the details	chốt các chi tiết	/ˈfaɪnəlaɪz ðə ˈdiːteɪlz/
-go over	xem xét, rà soát	/ɡoʊ ˈoʊvər/
-product test	thử nghiệm sản phẩm	/ˈprɑːdʌkt test/
-laptop-computer backpack	ba lô đựng máy tính xách tay	/ˈlæptɑːp kəmˈpjuːtər ˈbækpæk/
-require	yêu cầu, đòi hỏi	/rɪˈkwaɪər/
-design change	thay đổi thiết kế	/dɪˈzaɪn tʃeɪndʒ/
-marketing firm	công ty tiếp thị	/ˈmɑːrkɪtɪŋ fɜːrm/
-product prototype	mẫu thử sản phẩm	/ˈprɑːdʌkt ˈproʊtətaɪp/
-consumer	người tiêu dùng	/kənˈsuːmər/
-positive feedback	phản hồi tích cực	/ˈpɑːzətɪv ˈfiːdbæk/
-overall	nhìn chung	/ˌoʊvərˈɔːl/
-separate compartment	ngăn riêng biệt	/ˈsepərət kəmˈpɑːrtmənt/
-computer compartment	ngăn đựng máy tính	/kəmˈpjuːtər kəmˈpɑːrtmənt/
-shoulder strap	quai đeo vai	/ˈʃoʊldər stræp/
-uncomfortable	không thoải mái	/ʌnˈkʌmftərbəl/
-heavy equipment	thiết bị nặng	/ˈhevi ɪˈkwɪpmənt/
-revise the design	chỉnh sửa thiết kế	/rɪˈvaɪz ðə dɪˈzaɪn/
-as quickly as possible	nhanh nhất có thể	/æz ˈkwɪkli æz ˈpɑːsəbəl/
-be scheduled to	được lên lịch để	/bi ˈskedʒuːld tuː/
-official product release	đợt ra mắt sản phẩm chính thức	/əˈfɪʃəl ˈprɑːdʌkt rɪˈliːs/
-early next year	đầu năm sau	/ˈɜːrli nekst jɪr/
-security audit	cuộc kiểm toán/đánh giá an ninh	/sɪˈkjʊrəti ˈɔːdɪt/
-secure	bảo vệ, bảo đảm an toàn	/sɪˈkjʊr/
-productive	có hiệu quả, năng suất	/prəˈdʌktɪv/
-if you like	nếu bạn muốn	/ɪf juː laɪk/
-dinner specials	các món đặc biệt trong bữa tối	/ˈdɪnər ˈspeʃəlz/
-baked salmon	cá hồi nướng	/beɪkt ˈsæmən/
-for the first time	lần đầu tiên	/fər ðə fɜːrst taɪm/
-order	đơn hàng	/ˈɔːrdər/
-be delivered	được giao	/bi dɪˈlɪvərd/
-Wednesday afternoon	chiều thứ Tư	/ˈwenzdeɪ ˌæftərˈnuːn/
-put something away	cất thứ gì đi	/pʊt ˈsʌmθɪŋ əˈweɪ/
-mail room	phòng thư từ/bưu phẩm	/ˈmeɪl ruːm/
-monthly membership fee	phí thành viên hằng tháng	/ˈmʌnθli ˈmembərʃɪp fiː/
-service	dịch vụ	/ˈsɜːrvɪs/
-next month	tháng tới	/nekst mʌnθ/
-don't let me forget	đừng để tôi quên	/doʊnt let miː fərˈɡet/
-receive	nhận	/rɪˈsiːv/
-email	thư điện tử	/ˈiːmeɪl/
-license	giấy phép	/ˈlaɪsəns/
-receipt	hóa đơn, biên nhận	/rɪˈsiːt/
-delivery service	dịch vụ giao hàng	/dɪˈlɪvəri ˈsɜːrvɪs/
-have a look at	xem qua	/hæv ə lʊk æt/
-computer	máy tính	/kəmˈpjuːtər/
-meeting	cuộc họp	/ˈmiːtɪŋ/
-this afternoon	chiều nay	/ðɪs ˌæftərˈnuːn/
-across the street	bên kia đường	/əˈkrɔːs ðə striːt/
-otherwise	nếu không thì; ngoài ra	/ˈʌðərwaɪz/
-post a schedule	đăng/dán lịch trình	/poʊst ə ˈskedʒuːl/
-hang a copy	treo/dán một bản	/hæŋ ə ˈkɑːpi/
-conference room	phòng họp	/ˈkɑːnfərəns ruːm/
-in a few hours	trong vài giờ nữa	/ɪn ə fjuː ˈaʊərz/
-submit	nộp, gửi	/səbˈmɪt/
-lead a seminar	chủ trì một buổi hội thảo	/liːd ə ˈsemɪnɑːr/
-safety seminar	hội thảo về an toàn	/ˈseɪfti ˈsemɪnɑːr/
-management	ban quản lý	/ˈmænɪdʒmənt/
-whenever	bất cứ khi nào	/wenˈevər/
-prefer	thích hơn, ưu tiên	/prɪˈfɜːr/
-fill out	điền vào	/fɪl aʊt/
-time sheet	bảng chấm công	/ˈtaɪm ʃiːt/
-by three p.m.	trước/không muộn hơn 3 giờ chiều	/baɪ θriː ˌpiːˈem/
-make a note	ghi chú	/meɪk ə noʊt/
-place an order	đặt hàng	/pleɪs ən ˈɔːrdər/
-as soon as possible	sớm nhất có thể	/æz suːn æz ˈpɑːsəbəl/
+あ a 
+い i stomach
+う ɯ 
+え e 
+お o 
+あい ai love
+うえ ɯe up, above
+いいえ iːe no
+あおい aoi blue
+か ka mosquito
+が ɡa 
+き ki 
+ぎ ɡi 
+く kɯ 
+ぐ ɡɯ 
+け ke 
+げ ɡe 
+こ ko 
+ご ɡo 
+かく kakɯ to write
+かげ kaɡe shadow
+きく kikɯ to listen
+こえ koe voice
+かぎ kaɡi key
+きおく kiokɯ memory
+えいが eːɡa movie
+おおきい oːkiː big
+さ sa 
+ざ za 
+し ɕi 
+じ dʑi letter
+す sɯ 
+ず zɯ diagram
+せ se 
+ぜ ze 
+そ so 
+ぞ zo 
+すし sɯɕi sushi
+じこ dʑiko accident
+すき sɯ̥ki like
+さく sakɯ to bloom: nở hoa
+ぞう zoː elephant
+おかし okaɕi sweet
+おさけ osake alcohol
+さいご saiɡo last
+そうぞう soːzoː imagination
+こうこうせい koːkoːseː high school student
+かさ kasa umbrella
+けす kesɯ to erase
+さそう sasoː to invite
+かえす kaesɯ to return
+おす osɯ to push
+くじ kɯdʑi lottery: xổ số
+おこす okosɯ to wake someone up
+うさぎ ɯsaɡi rabbit
+きし kiɕi knight
+しお ɕio salt: muối
+すこし sɯkoɕi a little
+さいせい saiseː playback
+すぐ sɯɡɯ immediately
+いしき iɕiki consciousness: ý thức
+さがす saɡasɯ search
+おかしい okaɕiː strange
+しぐさ ɕiɡɯsa gesture mannerism
+しかく ɕikakɯ square
+がくせい ɡakɯseː student
+た ta 
+だ da 
+ち tɕi 
+ぢ dʑi 
+つ tsɯ 
+づ dzɯ 
+て te hand
+で de 
+と to 
+ど do 
+くつ kɯtsɯ shoes
+ちず tɕizɯ map
+でし deɕi apprentice: người học việc
+たつ tatsɯ to stand
+とおい toːi far
+つづく tsɯdzɯkɯ continue
+どつち dotːɕi 
+だいがく daiɡakɯ university
+あさつて asatːe day after tomorrow
+あちつく otɕitsɯkɯ to calm down
+な na 
+に ɲi 
+ぬ nɯ 
+ね ne 
+の no 
+なに naɲi what
+いぬ inɯ dog
+ねこ neko cat
+にじ ɲidʑi rainbow
+おかね okane money
+せなか senaka upper back
+なつとう natsɯtoː fermented soybeans
+おねがい oneɡai please, request

@@ -5,7 +5,7 @@ After=graphical-session.target
 [Service]
 Type=simple
 WorkingDirectory=%h/.local/share/vocab-popup
-ExecStart=/usr/bin/python3 %h/.local/share/vocab-popup/app.py --file %h/.local/share/vocab-popup/vocab/tu_vung.txt --burst 2 --burst-gap 10 --interval 50
+ExecStart=/usr/bin/python3 %h/.local/share/vocab-popup/app.py --file %h/.local/share/vocab-popup/vocab/tu_vung.txt 
 
 [Install]
 WantedBy=default.target
