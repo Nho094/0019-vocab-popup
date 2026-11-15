@@ -61,7 +61,7 @@ def main():
     parser.add_argument(
         "--interval",
         type=positive_seconds,
-        default=10,
+        default=25,
         metavar="SECONDS",
         help="Seconds between notifications (default: 300)",
     )
