@@ -11,7 +11,10 @@ import argparse
 import sys
 import time
 
-from vocab.vocab import cycle, load
+try:
+    from vocab import cycle, load
+except (ImportError, AttributeError):
+    from vocab.vocab import cycle, load
 from notifier import notify
 
 
